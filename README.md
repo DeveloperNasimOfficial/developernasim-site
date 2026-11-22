@@ -39,19 +39,20 @@ const SITE = {
 
 ## 2. GitHub e upload (ekbar)
 
-1. https://github.com/new e jao → Repository name: `developernasim-site` → **Public** ba Private → Create.
-2. Ei folder e PowerShell/Terminal khulo, then:
+Git repo already ready ache (first commit kora). Shudhu login kore push korte hobe. Ei folder e PowerShell khulo:
 
 ```
-git init
-git add .
-git commit -m "New portfolio site"
-git branch -M main
-git remote add origin https://github.com/<tomar-username>/developernasim-site.git
-git push -u origin main
+gh auth login
+```
+(GitHub.com → HTTPS → Login with a web browser → code ta browser e boshao)
+
+```
+gh repo create developernasim-site --public --source . --push
 ```
 
-(Git na thakle GitHub Desktop install kore "Add existing repository" diye o kora jay.)
+Bas! Repo hobe `github.com/<tomar-username>/developernasim-site`.
+
+(GitHub Desktop diye o kora jay: File → Add local repository → ei folder → Publish repository.)
 
 ---
 
